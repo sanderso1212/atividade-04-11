@@ -27,7 +27,19 @@ if(isset($_GET['cep'])) {
         <h2>cep encontrado</h2>
         <ul>
             <?php 
-            foreach($endereço as $data => <br>)
+            foreach($endereço as $data => $valor) {
+                if(strlen($valor) > 0 ) {
+                echo "$data: $valor <br>";
+                echo "<button>Salvar</button";
+                }
+            }
             ?>
         </ul>
+        <form action="salvar.php" method="POST">
+        <button>SALVAR</button>
+        </form>
     </div>
+    <?php elseif(isset($endereço['erro'])):?>
+        <h2>CEP nao encontrado</h2>
+        <p>O CEP ditado pelo usuario nao existe</p>
+<?php endif ?>
