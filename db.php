@@ -1,6 +1,6 @@
 <?php
 
-$hostname = "locallhost";
+$hostname = "localhost";
 $username = "root";
 $password = "";
 $database = "sistema_endereços";
